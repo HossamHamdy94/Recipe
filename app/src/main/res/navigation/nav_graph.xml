@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/recipeListScreen">
+
+    <fragment
+        android:id="@+id/recipeListScreen"
+        android:name="com.example.recipetask.RecipeListScreen"
+        android:label="recipe_list_screen_fragment" >
+        <action
+            android:id="@+id/action_showDetail"
+            app:destination="@id/detialFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detialFragment"
+        android:name="com.example.recipetask.DetialFragment"
+        android:label="fragment_detial">
+        <argument
+        android:name="selectedProperty"
+        app:argType="com.example.recipetask.RecipeItem"
+        />
+    </fragment>
+
+
+
+</navigation>
